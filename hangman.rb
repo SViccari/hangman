@@ -7,38 +7,33 @@ word_bank = ["Stephanie", "Timothy"]
 #choose a random word from word bank
 answer = word_bank.sample
 
-hint = answer.length
-puts "The word is #{hint} letters long."
+    answer.each_char do |x|
+      print " _"
+    end
+  
 #prompt the user for a letter or a guess
-puts "You have three guesses. Please begin by entering a letter."
-guess = gets.chomp
+puts "   You have three guesses. Please begin by entering a letter."
+    
+guess_count = 0
+
+while guess_count < 3
+  guess = gets.chomp.to_s
+  if !/[a-zA-Z]/.match(guess)
+    puts "Don't be crazy. Please enter a letter."
+  else
+    puts "great job!"
+ end
+end
 
 
-#validate that the user entered a letter
-# while guess < 3
-#   if /[a-zA-Z]/.match(guess)
-#     if guess 
-#   
-#   
-#   
-#   
-#   
-#   
-#   else
-#     puts "Please enter a letter"
-# end
+
+
 # 
-# 
-
-
-
-
 
 
 
 #while puzzle is not solved
 
-  
 
   #If user guessed a letter, check to see if it's in the words
 
