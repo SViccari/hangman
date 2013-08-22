@@ -1,24 +1,40 @@
 #!/usr/bin/env ruby
+#Purpose of Program 
 puts "Welcome to Hangman! Let\'s play!"
+
+#read in a list of words
+word_bank = ["Stephanie", "Timothy"]
+#choose a random word from word bank
+answer = word_bank.sample
+
+#prompt the user for a letter or a guess
 puts "You have ten guesses. Please begin by entering a letter."
-input = gets.chomp
+guess = gets.chomp
 
 
-if !/[a-zA-Z]/.match(input)
+#validate that the user entered a letter
+if /[a-zA-Z]/.match(guess)
+  
+  
+  
+  
+  
+  
+else
   puts "Please enter a letter"
 end
 
 
 
 
-#create a word 'bank'
-# word = [Stephanie]
-#read in a list of words
+
+
+
 
 
 #while puzzle is not solved
 
-  #prompt the user for a letter or a guess
+  
 
   #If user guessed a letter, check to see if it's in the words
 
