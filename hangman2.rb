@@ -3,6 +3,8 @@
 #Purpose of Program
 puts "Welcome to hangman! Please guess a letter a - z."
 
+
+
 def set_up_game
   word_bank = ["stephanie", "timothy"]
   @word = word_bank.sample
@@ -12,15 +14,15 @@ def set_up_game
 end
 
 def print_lines
-   @user_word || @user_word= @word.tr(@word, "_")
+	 @user_word || @user_word= @word.tr(@word, "_")
 end
 
 def check_guess(guess)
-  @word.split(//).each_with_index do |char, index|
-   if guess.downcase == char
-     @user_word[index] = guess.downcase
-   end
-  end
+	@word.split(//).each_with_index do |char, index|
+	 if guess.downcase == char
+	   @user_word[index] = guess.downcase
+	 end
+	end
 end
 
 def get_guess
@@ -56,7 +58,7 @@ play_game
 # guess_count = 0
 
 # # while guess_count > 0
-#   puts "you have #{guess_count} guesses remaining."
-#   guess = gets.chomp
-#   check_guess
-#   print print_lines
+# 	puts "you have #{guess_count} guesses remaining."
+# 	guess = gets.chomp
+# 	check_guess
+# 	print print_lines
