@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 #Purpose of Program
-puts "Welcome to hangman! Please guess a letter a - z."
+puts "Welcome to hangman!" 
+puts "You have ten guesses. Please guess a letter a-z."
 
 def set_up_game
   word_bank = ["stephanie", "timothy"]
@@ -37,6 +38,8 @@ def play_turn
   get_guess  
   check_guess(@guess)
   @count += 1
+  puts "You've used #{@count} guess."
+  puts "Please enter a letter a-z."
 end
 
 def play_game
@@ -48,12 +51,7 @@ end
 set_up_game
 play_game
 
-
-
-# puts "This word has #{@word.length} letters."
-# print print_lines
-
-# guess_count = 0
+puts "Thanks for playing!"
 
 # # while guess_count > 0
 #   puts "you have #{guess_count} guesses remaining."
