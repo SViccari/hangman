@@ -1,13 +1,11 @@
 #!/usr/bin/env ruby
 
 #Purpose of Program
-puts "Welcome to hangman!" 
-puts "You have ten guesses. Please guess a letter a-z."
-
 def set_up_game
-  word_bank = ["stephanie", "timothy"]
-  @word = word_bank.sample
+  word_bank = ["maverick", "boston", "apollo", "hangman", "developer"]
+  @word = word_bank.shuffle.first
   @word_count = @word.length
+  puts "This word has #{@word_count} letters."
   @guess_count = 10
   @count = 0
 end
@@ -40,32 +38,29 @@ def play_turn
   @count += 1
     if @guess == @word
       puts "You win!"
+      puts "Thanks for playing!"
       exit
+    elsif @user_word == @word 
+      puts "Congratulations, you've guessed the word!"
+      exit 
+    elsif @count == 10
+      puts "You're out of chances, better luck next time..."
+      puts "The hidden word was #{@word}."
     else
   puts "You've used #{@count} guess."
-  puts "Please enter a letter a-z."
-end
-end
+  puts "Guess a single letter (a-z) or the entire word."
+    end
+  end
 
 def play_game
   while @user_word != @word && @count < @guess_count
    play_turn
-end
+  end
 end
 
-# def play_game
-#   while @user_word != @word && @count < @guess_count
-#    play_turn
-#   end
-# end
-
+puts "Welcome to hangman! You have ten guesses."
+puts "Please enter a letter a-z."
 set_up_game
 play_game
 
-puts "Thanks for playing!"
 
-# # while guess_count > 0
-#   puts "you have #{guess_count} guesses remaining."
-#   guess = gets.chomp
-#   check_guess
-#   print print_lines
