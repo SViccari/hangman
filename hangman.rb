@@ -38,15 +38,26 @@ def play_turn
   get_guess  
   check_guess(@guess)
   @count += 1
+    if @guess == @word
+      puts "You win!"
+      exit
+    else
   puts "You've used #{@count} guess."
   puts "Please enter a letter a-z."
+end
 end
 
 def play_game
   while @user_word != @word && @count < @guess_count
    play_turn
-  end
 end
+end
+
+# def play_game
+#   while @user_word != @word && @count < @guess_count
+#    play_turn
+#   end
+# end
 
 set_up_game
 play_game
