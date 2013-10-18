@@ -100,7 +100,10 @@ class Word
     @word_bank = [
       'refactor',
       'cappuccino',
-      'agile']
+      'agile',
+      'stupendous',
+      'jittery',
+      'heroic']
   end
 
   def random_word
