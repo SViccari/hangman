@@ -1,8 +1,9 @@
+require 'pry'
 #!/usr/bin/env ruby
 
 #Purpose of Program
 def set_up_game
-  word_bank = ["maverick", "boston", "apollo", "hangman", "developer"]
+  word_bank = ["adventurous", "boston", "applesauce", "hangman", "developer"]
   @word = word_bank.shuffle.first
   @word_count = @word.length
   puts "This word has #{@word_count} letters."
@@ -45,10 +46,10 @@ def play_turn
       exit 
     elsif @count == 10
       puts "You're out of chances, better luck next time..."
-      puts "The hidden word was #{@word}."
+      puts "The hidden word was '#{@word}.'"
     else
   puts "You've used #{@count} guess."
-  puts "Guess a single letter (a-z) or the entire word."
+  puts "Please guess a single letter (a-z) or the entire word."
     end
   end
 
