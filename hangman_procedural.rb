@@ -1,7 +1,7 @@
 require 'pry'
 #!/usr/bin/env ruby
 
-#Purpose of Program
+#First attempt early in the cohort
 def set_up_game
   word_bank = ["adventurous", "boston", "applesauce", "hangman", "developer"]
   @word = word_bank.shuffle.first

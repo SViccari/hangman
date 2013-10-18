@@ -1,4 +1,6 @@
 require 'pry'
+#refactored ugly procedural code
+#note to self: several methods need fewer responsibilities
 # *****************
 
 class Game
@@ -109,7 +111,6 @@ class Word
     @word.length
   end
 end
-
 
 my_game = Game.new
 my_game.introduction
